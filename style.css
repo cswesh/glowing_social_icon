@@ -31,15 +31,15 @@ ul li{
 }
 ul li:hover{
     z-index: 10000;
-    transform: scale(0.75);
+    transform:scale(2) rotate(360deg);
 }
 ul li::before{
     content:'';
     position: absolute;
     inset: 30px;
     box-shadow: 0 0 0 10px var(--clr),
-    0 0 0 20px var(--bg),
-    0 0 0 22px var(--clr);
+    0 0 0 20px var(--bg);
+    /* 0 0 0 22px var(--clr); */
     transition:0.5s;
 }
 ul li::before{
@@ -48,10 +48,11 @@ ul li::before{
 ul li::after{
     content:'';
     position: absolute;
-    inset:0;
+    inset:-10px;
     background: var(--bg);
     transform: rotate(45deg);
 }
+
 ul li a{
     position: relative;
     text-decoration: none;
